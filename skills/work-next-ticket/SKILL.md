@@ -18,12 +18,12 @@ The repository defines its own tracker and label vocabulary. Before acting, read
 1. Run `./scripts/init.sh` and verify it finishes without errors.
    - If it fails, stop and fix the environment before touching application code.
 2. Read the issue tracker using the workflow defined by the repository.
-3. Choose exactly one task that is AFK-ready according to the repository's triage mapping. Do not work on more than one issue at a time.
+3. Choose exactly one task that is ready to implement according to the repository's triage mapping. Do not work on more than one issue at a time.
 
 ## Choosing the Task
 
 1. List open work items using the repository's configured tracker workflow.
-2. Filter to the repo's AFK-ready triage state — the canonical role is `ready-for-agent`, but the actual tracker string may differ.
+2. Filter to the repo's implementation-ready triage state — the canonical role is `ready-for-implementer`, but the actual tracker string may differ.
 3. Choose the item with the lowest issue/ticket identifier unless the repository documents a different priority rule.
 4. If the repository defines a "work started" label/status (for example `in-progress`), apply it before making code changes.
 5. Document on the ticket that you are starting work and summarize the intended first step.
@@ -79,8 +79,8 @@ There must be exactly one blank line between the final sentence of the message a
    ```
    Everything must be green.
 2. If the task is finished, advance the ticket using the repository's tracker conventions:
-   - Apply the review-ready triage state for this repo.
-   - Remove any AFK-ready or in-progress markers if the repo uses them.
+   - Apply the `ready-for-reviewer` triage state for this repo.
+   - Remove any `ready-for-implementer` or `in-progress` markers if the repo uses them.
 3. Link the review artifact (PR/MR) to the child issue, if one exists or was created.
 4. Confirm any commits created by the agent use Conventional Commits format and that the child issue's work is contained in a focused commit.
 5. Ensure the repository is clean and contains no temporary files, debug prints, or unexplained TODOs.
